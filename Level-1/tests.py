@@ -10,7 +10,7 @@ class TestOnlineStore(unittest.TestCase):
         order_1 = c.Order(id='1', items=[payment, tv])
         self.assertEqual(c.validorder(order_1), 'Order ID: 1 - Full payment received!')
 
-    # Example 2 - successfully detects payment imbalance as tv was never paid
+    #Example 2 - successfully detects payment imbalance as tv was never paid
     def test_2(self):
         tv = c.Item(type='product', description='tv', amount=1000.00, quantity=1)
         order_2 = c.Order(id='2', items=[tv])
